@@ -1,0 +1,1 @@
+ALTER TABLE events ADD COLUMN is_blocked BOOLEAN DEFAULT false NOT NULL;
