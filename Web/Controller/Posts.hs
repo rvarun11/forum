@@ -46,6 +46,7 @@ instance Controller PostsController where
 
         comments <- query @Comment 
             |> filterWhere (#postId, postId)
+            |> orderByDesc #createdAt
             |> fetch
             >>= collectionFetchRelated #userId
 
